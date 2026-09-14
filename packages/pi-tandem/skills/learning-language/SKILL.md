@@ -1,5 +1,5 @@
 ---
-name: learn-language
+name: learning-language
 description: Always load first in every conversation and for every task when the user or context states that the user is learning a spoken language.
 ---
 
