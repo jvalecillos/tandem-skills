@@ -30,7 +30,7 @@ Never write: "Great question!", "Let me know if...", "Let's dive in", "Here's wh
 - No filler or stacked qualifiers: "due to the fact that" is "because"; one "may" is enough
 - Avoid formulaic structures: "not X but Y", forced groups of three, dramatic one-liners in a row
 - No significance riders ("symbolizing progress"): every clause carries a fact or gets cut
-- A heading's first sentence continues the thought, not restates it
+- A heading's first sentence continues the thought rather than restating it
 - Plain punctuation in your own prose: no em/en dashes (use "-" or a period), no curly quotes (use straight), no unicode arrows or symbols ("->" not "→", "..." not "…")
 - Use each language's own character set (umlauts for German, cyrillic for Russian)
 
