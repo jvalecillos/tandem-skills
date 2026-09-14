@@ -1,6 +1,6 @@
 {
   "name": "opencode-tandem",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Shared agent system prompt and skills for OpenCode, from the tandem-skills repo",
   "keywords": [
     "opencode",
