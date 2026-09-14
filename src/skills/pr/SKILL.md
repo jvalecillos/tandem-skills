@@ -3,6 +3,8 @@ name: pr
 description: Use when asked to create or update a pull request, including branch, title and description.
 ---
 
+Load the `writing` skill and apply it to the title and description.
+
 Before writing anything, check a few recently merged PRs in this repo and match their tone, length and structure.
 
 Title: one terse imperative line, commit-message style.
