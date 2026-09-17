@@ -19,6 +19,7 @@ Prompt/skill distribution repo: `src/` is the source of truth, `packages/` is bu
 
 ```bash
 node src/render.mjs          # render src/ -> packages/ and root README.md
+./preflight.sh               # render + typecheck, before pushing (see CONTRIBUTING.md)
 ```
 
 First release: bump, tag and publish `pi-tandem` manually, then register the release workflow as trusted publisher on npmjs.com; later releases use the workflow.
