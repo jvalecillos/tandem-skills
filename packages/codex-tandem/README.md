@@ -4,15 +4,6 @@ Pair-programming rules for coding agents. A system-prompt patch plus a small set
 
 ## Install
 
-Claude Code:
-
-```bash
-claude plugin marketplace add skhoroshavin/tandem-skills
-claude plugin install tandem@tandem-skills
-```
-
-Codex CLI:
-
 To use this with Codex, copy the skills folder to your project's `.agents/` folder and append the system prompt to your repository's existing `AGENTS.md` (or `PROMPT.md`):
 
 ```bash
@@ -22,18 +13,6 @@ cp -r packages/codex-tandem/skills/* .agents/skills/
 
 # Append system prompt to AGENTS.md
 cat packages/codex-tandem/prompt.md >> AGENTS.md
-```
-
-OpenCode:
-
-```bash
-opencode plugin -g opencode-tandem
-```
-
-Pi Coding Agent:
-
-```bash
-pi install npm:pi-tandem
 ```
 
 ## Philosophy
