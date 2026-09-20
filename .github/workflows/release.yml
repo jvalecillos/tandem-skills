@@ -63,13 +63,25 @@ jobs:
         working-directory: packages/opencode-tandem
         run: npm version ${{ steps.bump.outputs.version }} --no-git-tag-version
 
+      - name: Bump codex-tandem version
+        env:
+          VERSION: ${{ steps.bump.outputs.version }}
+        run: |
+          node -e '
+            const { readFileSync, writeFileSync } = require("fs");
+            const pluginPath = "packages/codex-tandem/.codex-plugin/plugin.json";
+            const plugin = JSON.parse(readFileSync(pluginPath, "utf8"));
+            plugin.version = process.env.VERSION;
+            writeFileSync(pluginPath, JSON.stringify(plugin, null, 2) + "\n");
+          '
+
       - name: Commit, tag and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           TAG="v${{ steps.bump.outputs.version }}"
-          git add packages/pi-tandem/package.json packages/claude-tandem/.claude-plugin/plugin.json packages/opencode-tandem/package.json
+          git add packages/pi-tandem/package.json packages/claude-tandem/.claude-plugin/plugin.json packages/codex-tandem/.codex-plugin/plugin.json packages/opencode-tandem/package.json
           git commit -m "Release $TAG"
           git tag -a "$TAG" -m "$TAG"
           git push origin main --follow-tags
